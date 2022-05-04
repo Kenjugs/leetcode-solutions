@@ -24,7 +24,7 @@ var isValidBST = function(root) {
 };
 
 var isValidBSTIterative = function(root) {
-    let stack = [];
+    const stack = [];
     let current = root;
     let previous = null;
 
@@ -64,8 +64,8 @@ var recursiveHelper = function(current, minimum, maximum) {
         return false;
     }
 
-    let left = recursiveHelper(current.left, minimum, current);
-    let right = recursiveHelper(current.right, current, maximum);
+    const left = recursiveHelper(current.left, minimum, current);
+    const right = recursiveHelper(current.right, current, maximum);
 
     return left && right;
 };

@@ -16,8 +16,8 @@
  * @return {boolean}
  */
 var isSymmetric = function(root) {
-    let left = [];
-    let right = [];
+    const left = [];
+    const right = [];
     
     if (root) {
         left.push(root.left);
@@ -25,11 +25,11 @@ var isSymmetric = function(root) {
     }
     
     while (left.length > 0 || right.length > 0) {
-        let queueCount = left.length;
+        const queueCount = left.length;
         
         for (let i = 0; i < queueCount; ++i) {
-            let leftCurrent = left.shift();
-            let rightCurrent = right.shift();
+            const leftCurrent = left.shift();
+            const rightCurrent = right.shift();
 
             if (leftCurrent === null && rightCurrent !== null) {
                 return false;

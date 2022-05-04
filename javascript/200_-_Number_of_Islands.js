@@ -10,8 +10,8 @@
  * @return {number}
  */
 var numIslands = function(grid) {
-    let m = grid[0].length;
-    let n = grid.length;
+    const m = grid[0].length;
+    const n = grid.length;
     let ans = 0;
 
     for (let i = 0; i < n; ++i) {

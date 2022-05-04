@@ -21,7 +21,7 @@ var kthSmallest = function(root, k) {
 };
 
 var kthSmallestIterative = function(root, k) {
-    let stack = [];
+    const stack = [];
     let current = root;
 
     while (current || stack.length > 0) {

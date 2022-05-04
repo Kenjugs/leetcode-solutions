@@ -20,8 +20,8 @@ var inorderTraversal = function(root) {
 };
 
 var inorderTraversalIterative = function(root) {
-    let ans = [];
-    let stack = [];
+    const ans = [];
+    const stack = [];
     let current = root;
 
     while (current || stack.length > 0) {
@@ -38,7 +38,7 @@ var inorderTraversalIterative = function(root) {
 };
 
 var inorderTraversalRecursive = function(root) {
-    let ans = [];
+    const ans = [];
     recursiveHelper(root, ans);
     return ans;
 };

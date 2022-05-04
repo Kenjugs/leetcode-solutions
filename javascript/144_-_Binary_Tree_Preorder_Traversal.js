@@ -16,12 +16,12 @@
  * @return {number[]}
  */
 var preorderTraversal = function(root) {
-    let ans = [];
-    let stack = [];
+    const ans = [];
+    const stack = [];
     stack.push(root);
 
     while (stack.length > 0) {
-        let current = stack.pop();
+        const current = stack.pop();
 
         if (current) {
             stack.push(current.right);

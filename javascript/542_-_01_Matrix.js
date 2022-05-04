@@ -9,10 +9,9 @@
  * @return {number[][]}
  */
 var updateMatrix = function(mat) {
-    let queue = [];
-    let dist = 0;
-    let m = mat.length;
-    let n = mat[0].length;
+    const queue = [];
+    const m = mat.length;
+    const n = mat[0].length;
 
     for (let i = 0; i < m; ++i) {
         for (let j = 0; j < n; ++j) {
@@ -26,7 +25,7 @@ var updateMatrix = function(mat) {
         }
     }
 
-    let directions = [
+    const directions = [
         [-1, 0], // up
         [0, 1],  // right
         [1, 0],  // down
@@ -34,11 +33,11 @@ var updateMatrix = function(mat) {
     ];
 
     while (queue.length > 0) {
-        let current = queue.shift();
+        const current = queue.shift();
 
-        for (let d of directions) {
-            let i = current[0] + d[0];
-            let j = current[1] + d[1];
+        for (const d of directions) {
+            const i = current[0] + d[0];
+            const j = current[1] + d[1];
 
             if (i < 0 || i >= m) {
                 continue;

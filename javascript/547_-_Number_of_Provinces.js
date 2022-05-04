@@ -14,8 +14,8 @@
  * @return {number}
  */
 var findCircleNum = function(isConnected) {
-    let friendZoned = new Array(isConnected.length);
-    let stack = [];
+    const friendZoned = new Array(isConnected.length);
+    const stack = [];
     let ans = 0;
 
     for (let i = 0; i < isConnected.length; ++i) {
@@ -24,7 +24,7 @@ var findCircleNum = function(isConnected) {
             stack.push(i);
 
             while (stack.length > 0) {
-                let current = stack.pop();
+                const current = stack.pop();
                 friendZoned[current] = true;
 
                 for (let j = 0; j < isConnected[current].length; ++j) {
