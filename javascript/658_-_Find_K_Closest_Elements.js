@@ -19,20 +19,15 @@ var findClosestElements = function(arr, k, x) {
     
     let left = pos - 1;
     let right = pos;
-    const ans = [];
     
     while (k > 0) {
         if (left < 0) {
-            ans.push(arr[right]);
             ++right;
         } else if (right >= arr.length) {
-            ans.push(arr[left]);
             --left;
         } else if (Math.abs(arr[left] - x) <= Math.abs(arr[right] - x)) {
-            ans.push(arr[left]);
             --left;
         } else {
-            ans.push(arr[right]);
             ++right;
         }
         
